@@ -33,7 +33,7 @@
 # define SYS_LIB_USER				HTTP_SYSTEM_OPEN+"lib/user"
 
 /* Specify where your httpd-configuration files are located */
-# define JORINDE_HTTPD_CONFIG_DIR	JORINDE_HTTPD+"config/"
+# define JORINDE_HTTPD_CONFIG_DIR	JORINDE+"glue/kernel/config/"
 
 /* Macro to use to compile files */
 # define COMPILE(s)					if(!find_object(s)) compile_object(s);
