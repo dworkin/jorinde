@@ -59,7 +59,7 @@ Session get_session_object(string id)
 
 private string new_id()
 {
-	return hex_encode( hash_md5("" + random(0x7fffffff) + time()) );
+	return hex_encode( hash_string("MD5", "" + random(0x7fffffff) + time()) );
 }
 
 

@@ -54,7 +54,7 @@ int get_compile(Request request, Response response)
 	time = response->get_header("Last-Modified");
 	size = response->get_header("Content-Length");
 	name = request->get_uri()->get_absolute_filename();
-	hash = hash_md5(time, size, name);
+	hash = hash_string("MD5", time, size, name);
 
 	if( compiled[name] && compiled[name] == hash) {
 		return FALSE;
@@ -245,7 +245,7 @@ object compile(Request request, Response response, string source)
 
 		time = response->get_header("Last-Modified");
 		size = response->get_header("Content-Length");
-		hash = hash_md5(time, size, name);
+		hash = hash_string("MD5", time, size, name);
 
         compiled[name] = hash;
 		hash = hex_encode(hash);

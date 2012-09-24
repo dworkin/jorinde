@@ -328,7 +328,7 @@ static string hex_encode(string s)
  */
 static string friendly_md5(string str)
 {
-	return pad_left(32, "0", lower_case(hex_encode(hash_md5(str))));
+	return pad_left(32, "0", lower_case(hex_encode(hash_string("MD5", str))));
 }
 
 

@@ -85,7 +85,7 @@ static string update_hash()
 		tmp += hash_crc16(_strs[i]);
 	}
 
-	_hash = hash_md5(tmp);
+	_hash = hash_string("MD5", tmp);
 	_update_hash = FALSE;
 
 	return _hash;
